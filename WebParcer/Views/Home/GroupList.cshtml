@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Group>
+
+<body>
+    @{
+        string link = String.Empty;
+    }
+    <table>
+        <tr>
+            <td>Название группы</td>
+            <td>Количество подписчиков</td>
+            <td>Описание</td>
+        </tr>
+        @foreach (var group in Model)
+        {
+            link = "http://vk.com/club" + @group.Id;
+            <tr>
+                <td>
+                    <a href="@link">@group.Name</a>
+                </td>
+                <td>
+                    @group.MembersCount
+                </td>
+                <td>
+                    @group.Description
+                </td>
+            </tr>
+        }
+    </table>
+</body>

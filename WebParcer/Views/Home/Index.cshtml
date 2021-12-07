@@ -1,0 +1,18 @@
+﻿<body>
+    <form asp-action="GroupList" method="post">
+        <div class="col-xl-12">
+            <div class="form-group">
+                <input type="text" name="query" class="form-control" placeholder="Поисковый запрос" />
+            </div>
+        </div>
+
+        <div class="col-xl-12">
+            <div class="form-group">
+                <input type="number" name="countOfGroups" class="form-control" placeholder="Количество групп (не больше 1000)" />
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-dark">Искать</button>
+        </div>
+    </form>
+</body>
